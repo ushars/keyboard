@@ -1,0 +1,16 @@
+
+<view class="keyboard-box">
+  <view class="car-num">
+  <view class="title margin-bottom-sm flex justify-between">
+    <view>车牌号键盘</view>
+    <view class="flex justify-between align-center">
+      <image class="switch-car-num" src="https://img.zhxcxmall.com//1588228597896-959"></image>
+      <text class="text-theme" data-index="{{index}}" bindtap="changeCarType">{{item.carType==2?"切换为普通车牌号":"切换为新能源车牌号"}}</text>
+    </view>
+  </view>
+  <view class="car-number">
+    <view  class="car-block" wx:for="{{carBoxNum}}" wx:for-item="itm" wx:for-index="idx" data-index="{{index}}" wx:key="index" bindtap="openCarBoard">{{carNumStr[idx]}}</view>
+  </view>
+</view>
+<keyboard abc="{{abc}}" isCarBoard="{{isCarBoard}}" bind:carValue="carValue" bind:myevent="onMyEvent"></keyboard>
+</view>

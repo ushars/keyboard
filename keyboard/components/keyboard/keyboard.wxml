@@ -1,0 +1,33 @@
+<view class="keyboard-box" hidden="{{!isCarBoard}}">
+	<view class="u-tooltip" wx:if="tooltip">
+		<view class="u-tooltip-item u-tooltip-cancel" hover-class="u-tooltip-cancel-hover" bindtap="onCancel">
+			{{cancelBtn ? '取消' : ''}}
+		</view>
+		<view wx:if="showTips" class="u-tooltip-item u-tooltip-tips">
+			车牌号键盘
+		</view>
+		<view wx:if="confirmBtn" bindtap="onConfirm" class="u-tooltip-item u-tooltips-submit" hover-class="u-tooltips-submit-hover">
+			{{confirmBtn ? '完成' : ''}}
+		</view>
+	</view>
+	<view class="u-keyboard">
+		<view class="u-keyboard-grids">
+			<block>
+				<view class="u-keyboard-grids-item" wx:for="{{abc ? EngKeyBoardList : areaList}}" wx:for-item="group" wx:for-index="i" wx:key="i">
+					<view data-i="{{i}}" data-j="{{j}}" bindtap="carInputClick" hover-class="u-carinput-hover" class="u-keyboard-grids-btn" wx:for="{{group}}" wx:for-index="j" wx:key="index">
+						{{ item }}
+					</view>
+				</view>
+				<view bindtouchstart="backspaceClick" bindtouchend="clearTimer" class="u-keyboard-back" hover-class="u-hover-class">
+					<image class="backward" src="https://img.zhxcxmall.com//1589448172314-3193"></image>
+				</view>
+				<view class="u-keyboard-change" hover-class="u-carinput-hover" bindtap="changeCarInputMode">
+					<text class="zh" class="{{!abc ? 'active' : 'inactive'}}">中</text>
+					/
+					<text class="en" class="{{abc ? 'active' : 'inactive'}}">英</text>
+				</view>
+			</block>
+		</view>
+	</view>
+
+</view>

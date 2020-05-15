@@ -1,0 +1,24 @@
+.keyboard-box{
+  background-color: #fff;
+  min-height: 100vh;
+  padding:0 30rpx;
+}
+.switch-car-num{
+	width:20rpx;
+	height:20rpx;
+	margin-right:10rpx;
+}
+.car-number{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.car-block{
+	width:80rpx;
+	height:80rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border:1rpx solid #e6e6e6;
+	margin:0 10rpx;
+}

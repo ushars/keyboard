@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "keyboard": "../../components/keyboard/keyboard"
+  },
+  "navigationBarTitleText": "模拟车牌号键盘"
+}
